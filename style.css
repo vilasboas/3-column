@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --cyan-dark: hsl(179, 100%, 13%);
+}
+* {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+}
+h2 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.col a {
+    font-size: 14px;
+    text-decoration: none;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-transform: capitalize;
+}
+.col a:hover {
+    background: transparent;
+    color: #fff !important;
+}
+.col p {
+    margin-bottom: 60px;
+    min-height: 80px;
+}
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+}
+.flex-grid {
+    display:flex;
+    flex-wrap:wrap;
+    /* flex-direction:column; */
+}
+.col {
+    min-height: 290px;
+    width: 100%;
+    padding: 60px;
+    height: auto;
+}
+.col:nth-child(1) {
+    background: var(--orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.col:nth-child(1) a {
+    color: var(--orange);
+}
+.col:nth-child(2) {
+    background: var(--cyan);
+}
+.col:nth-child(2) a {
+    color: var(--cyan);
+}
+.col:nth-child(3) {
+    background: var(--cyan-dark);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.col:nth-child(3) a {
+    color: var(--cyan-dark);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .container {
+    max-width: 1440px;
+    }
+    .col {
+    width: calc(33.3% - 120px);
+    }
+    .col:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    }
+    .col:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    }
+    .flex-grid {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    }
+}
